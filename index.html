@@ -1,13 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="rocket.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jsrocket</title>
+    <link rel="stylesheet" type="text/css" href="rocket.css">
+    <title>rocket launch sequence</title>
+    <script type="text/javascript" src="js/image_slider.js"></script>
+    <script type="text/javascript" src="js/rocket.js"></script>
 </head>
-<body>
-    <button class="btn" onclick="hello()">nappi</button>
-    <script src="rocket.js"></script>
+
+<body class="body-state1">
+    <div class="left">
+        <div class="wrapper">
+            <div class="interface state1">
+                <div class="box">
+                    <div class="text-display">
+                        <h1>JS Rocket Launch!</h1>
+                    </div>
+                    <button href="#" class="button" onclick="changeState(2);">Launch!</button>
+                </div>
+            </div>
+            <div class="interface state2">
+                <div class="box">
+                    <div class="text-display">
+                        <h1 id="countdown">10</h1>
+                    </div>
+                    <button href="#" class="button" onclick="changeState(1), reset();">Abort!</button>
+                </div>
+            </div>
+            <div class="interface state3">
+                <div class="box">
+                    <div class="text-display">
+                        <h1>Lift Off!</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="interface state4">
+                <div class="box">
+                    <div class="text-display">
+                        <h1>Well done!</h1>  
+                    </div>
+                    <button href="#" class="button" onclick="changeState(1), reset();">Again!</button>
+                </div>
+            </div>
+            <div class="interface state5">
+                <div class="box">
+                    <div class="text-display">
+                        <h1>0h No!!!!</h1>
+                    </div>
+                    <button href="#" class="button" onclick="changeState(1);">Try again!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="scroller-container">
+            <div class="scroller">
+                <img class="scroller-img" src="kuvat/sky.jpg" alt="Scrolling Background">
+            </div>
+        </div>
+        <div class="ground"></div>
+        <div class="rocket"></div>
+        <div class="nervous" id="nervous"></div>
+        <div class="cant-wait" id="cant-wait"></div>
+    </div>
 </body>
+
 </html>
