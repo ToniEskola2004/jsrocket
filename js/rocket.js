@@ -36,7 +36,6 @@ async function appendImageClone() {
     console.log(`Current index: ${index}`);
 }
 
-// Example of calling appendImageClone() multiple times
 async function runAnimationMultipleTimes() {
     while (true) {
         if (isRunning) {
